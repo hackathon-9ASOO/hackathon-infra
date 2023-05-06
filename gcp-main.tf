@@ -29,3 +29,10 @@ resource "google_sql_database_instance" "instance" {
 
   deletion_protection  = "true"
 }
+
+resource "google_sql_user" "users" {
+  name     = "grupo13"
+  instance = google_sql_database_instance.instance.name
+  host     = "grupo-13-384916"
+  password = "changeme"
+}
