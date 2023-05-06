@@ -36,3 +36,8 @@ resource "google_sql_user" "users" {
   host     = "grupo-13-384916"
   password = "changeme"
 }
+
+resource "google_api_gateway_api" "api" {
+  provider = google-beta
+  api_id = "my-api"
+}
